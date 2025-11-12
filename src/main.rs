@@ -16,7 +16,7 @@ fn main() {
         io::stdin().read_line(&mut guess).expect("Failed to read"); // read_line() takes a mutable reference to the string
         let guess: u32 = match guess.trim().parse() { // trim() removes whitespace and parse() converts string to number
             Ok(num) => num,
-            Err(_) => {
+            Err(_) => { // _ is a catch-all value, we don't care about the specific error
                 println!("Please enter a valid number!");
                 continue
             } 
@@ -32,5 +32,9 @@ fn main() {
                 break;
             }
         }
+        //immutable variables, constants are values that are bound to a name and are not allowed to change, 
+        // but there are a few differences between constants and variables.
     }
 }
+
+
